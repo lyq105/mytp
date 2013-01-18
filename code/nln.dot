@@ -1,0 +1,9 @@
+digraph nonl {
+
+node [shape = box];
+node0 [label = " 计算",shape = doublecircle];
+
+开始 -> 结束;
+ 开始 -> "node0";
+
+}
