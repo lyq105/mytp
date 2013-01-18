@@ -1,0 +1,53 @@
+\documentclass[xetex,10pt]{beamer}
+
+\usepackage{graphics}
+%\usepackage[noindent,UTF8]{ctex}
+%\usetheme{CambridgeUS}
+\usecolortheme{npu}
+%\usefonttheme{structureitalicserif}
+\usefonttheme{structurebold}
+\usepackage[charter]{mathdesign}
+
+\useinnertheme[shadow]{rounded}
+\useoutertheme{npu}
+\title[NPU theme]{A beamer theme for Northwestern Polytecnical University }
+\author[Y. Li]{Yiqiang Li}
+\institute[Dept. Applied Math.]{Department of Applied Mathmethics}
+
+\begin{document}
+
+%\setbeamercolor{background canvas}{bg=gray}
+\begin{frame}[t]
+\titlepage
+\end{frame}
+%\setbeamercolor{background canvas}{bg=}
+
+\section{The first section}
+\begin{frame}[t]{frametitle}
+	\begin{equation}
+		\left\{
+		\begin{aligned}
+			\frac{1}{2}u(x) &= \int_{\Gamma_y}u^*(x,y)u(y) d\,\Gamma (y) + \int_{\Gamma_y} \frac{\partial u^*(x,y)}{\partial \mathbf{n}} q(y) d \Gamma(y), \\
+			q(x) &= \sigma u^4(x) - \int_\Gamma \frac{\sigma}{2 \pi R} u^4(y) d\Gamma(y)
+		\end{aligned}
+		\right.
+	\end{equation}
+	Define integral operators $\mathcal{V},\mathcal{K},\mathcal{R}$
+		\begin{eqnarray*}
+			(\mathcal{V}(u))(x) &=& \int_\Gamma u^*(x,y)u(y) d\Gamma(y) \\
+			(\mathcal{K}(q))(x) &=& \int_{\Gamma_y} \frac{\partial u^*(x,y)}{\partial \mathbf{n}} q(y) d \Gamma(y) \\
+			(\mathcal{R}(u))(x) &=& \int_\Gamma \frac{\sigma}{2 \pi R} u^4(y) d\Gamma(y)
+		\end{eqnarray*}
+\end{frame}
+%\setbeamercolor{background canvas}{bg=violet}
+\begin{frame}[t]{Nwpu logo}
+	\begin{figure}[htbp]
+		\begin{center}
+			%\includegraphics[height=0.1\textwidth]{nwpulogo}
+		\end{center}
+		\caption{Nwpu}
+		\label{fig:nwpu}
+	\end{figure}
+	
+\end{frame}
+\end{document}
