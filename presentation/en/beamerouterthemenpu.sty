@@ -7,7 +7,7 @@
 %
 % See the file doc/licenses/LICENSE for more details.
 
-\ProvidesPackageRCS $Header: /home/vedranm/bitbucket/beamer/base/themes/outer/beamerouterthemeinfolines.sty,v 445340293dde 2010/07/10 12:51:34 rivanvx $
+\ProvidesPackageRCS $Header: /home/vedranm/bitbucket/beamer/base/themes/outer/beamerouterthemenpu.sty,v 445340293dde 2010/07/10 12:51:34 rivanvx $
 
 
 \mode<presentation>
@@ -29,9 +29,10 @@
   \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
     \usebeamerfont{title in head/foot}\insertshorttitle
   \end{beamercolorbox}%
-  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}%
-    \usebeamerfont{date in head/foot}\insertshortdate{}\hspace*{2em}
-    \insertframenumber{} / \inserttotalframenumber\hspace*{2ex} 
+  \begin{beamercolorbox}[wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]{date in head/foot}
+    %\usebeamerfont{date in head/foot}
+		\insertshorttitle \hspace*{2ex}
+		\insertframenumber{}/ \inserttotalframenumber\hspace*{2ex} 
   \end{beamercolorbox}}%
   \vskip0pt%
 }
@@ -53,7 +54,7 @@
 %\setbeamersize{text margin left=1em,text margin right=1em}
 
 \defbeamertemplate*{title page}{nwpu theme}{%
-  \includegraphics[height=0.15\textwidth,width=\paperwidth]{nwpulogo} \\
+  \includegraphics[height=0.15\textwidth,width=0.15\paperwidth]{nwpulogo} \\
 	\vskip2em
 	\begin{center}
 	{\usebeamerfont{title}\usebeamercolor[fg]{frametitle}\inserttitle}\\
@@ -64,7 +65,6 @@
 	\vskip2em
   {\usebeamerfont{institute}\insertinstitute}
 	\vskip2em
-	\\
   \insertdate%\rule[-.5ex]{0pt}{.5ex}
 
 \end{center}
