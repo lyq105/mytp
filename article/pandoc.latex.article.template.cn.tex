@@ -1,21 +1,21 @@
-\documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$lang$,$endif$]{$documentclass$}
+\documentclass[fancyhdr,fntef,UTF8]{ctexart}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
 \usepackage{ifxetex,ifluatex}
 \usepackage{fixltx2e} % provides \textsubscript
-\usepackage[top=0.8in, bottom=0.8in, left=1in, right=1in]{geometry} %% 页芯尺寸
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry} %% 页芯尺寸
 
 % use microtype if available
 \ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
   \IfFileExists{microtype.sty}{\usepackage{microtype}}{}
   \usepackage[utf8]{inputenc}
-	\usepackage[fancyhdr,fntef,UTF8]{ctex}
+	%\usepackage[fancyhdr,fntef,UTF8]{ctex}
 $if(euro)$
   \usepackage{eurosym}
 $endif$
 \else % if luatex or xelatex
-  \usepackage[nofonts,nocap,nopunct,fancyhdr,fntef,UTF8]{ctex}
+  %\usepackage[nofonts,nocap,nopunct,fancyhdr,fntef,UTF8]{ctex}
   \newcommand{\euro}{€}
 $if(mainfont)$
     \setmainfont{$mainfont$}
@@ -154,6 +154,7 @@ $endif$
 \begin{document}
 $if(title)$
 \maketitle
+\newpage
 $endif$
 
 $for(include-before)$
@@ -162,8 +163,9 @@ $include-before$
 $endfor$
 $if(toc)$
 {
-\hypersetup{linkcolor=black}
+\hypersetup{linkcolor=blue}
 \tableofcontents
+\newpage
 }
 $endif$
 $body$
