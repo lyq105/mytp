@@ -148,12 +148,33 @@ $endfor$
 $if(title)$
 \title{$title$}
 $endif$
-\author{$for(author)$$author$$sep$ \and $endfor$}
+$if(author)$
+\author{
+$for(author)$
+$if(author.name)$
+\Large $author.name$\vspace{0.05in}
+$endif$
+$if(author.name)$
+\\ \normalsize\emph{$author.affiliation$} 
+$endif$
+$if(author.email)$
+\\ \footnotesize \url{$author.email$}\vspace*{0.2in}
+$endif$
+}
+$endfor$
+$endif$
 \date{$date$}
 
 \begin{document}
 $if(title)$
 \maketitle
+
+$if(abstract)$
+\begin{abstract}
+\noindent $abstract$
+\end{abstract}
+$endif$
+
 \newpage
 $endif$
 

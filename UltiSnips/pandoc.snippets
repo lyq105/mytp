@@ -1,0 +1,38 @@
+extends markdown
+
+# overwrite if necessary
+priority -49
+
+snippet title "Title Header" b
+% ${1:`!v Filename('', 'title')`}
+% ${2:`!v g:snips_author`}
+% ${3:`!v strftime("%d %B %Y")`}
+
+$0
+endsnippet
+
+snippet headen "The YAML metadata of this document" b
+---
+title:  '$1'
+author:
+- name: Li Yiqiang
+  affiliation: Northwestern Polytecnical University, Department of Applied Mathematics
+date: ${3:`!v strftime("%Y.%m.%d")`}
+tags: [$2]
+abstract: |
+  $4
+...
+endsnippet
+
+snippet head "The YAML metadata of this document" b
+---
+title:  '$1'
+author:
+- name: 李义强
+  affiliation: 西北工业大学理学院
+date: ${3:`!v strftime("%Y.%m.%d")`}
+tags: [$2]
+abstract: |
+  $4
+...
+endsnippet
