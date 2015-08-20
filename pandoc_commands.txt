@@ -1,0 +1,1 @@
+pdfcn|pdf -S --template=~/.vim/bundle/mytp/article/pandoc.latex.article.template.cn.tex --latex-engine=xelatex  --filter pandoc-citeproc
